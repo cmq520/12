@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>出行专辑登录页</title>
+    <link rel="shortcut icon" href="bitbug_favicon.ico">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #web_bg{
+            position:fixed;
+            top: 0;
+            left: 0;
+            width:100%;
+            height:100%;
+            min-width: 1000px;
+            z-index:-10;
+            background-size: cover;
+            background-position: center 0;
+        }
+        .login{
+            width: 330px;
+            height: 400px;
+            background-image: linear-gradient(25deg, #3e0e90, #4e59aa, #4a99c3, #0adbdc);
+            opacity: .9;
+            position: absolute;
+            /* display: flex; */
+            /* border: solid 2px white; */
+            box-shadow:10px 10px 10px rgba(131, 125, 127, .5);
+            left: 900px;
+            top: 100px;
+        }
+
+        .login p{
+            font-family: '微软雅黑';
+            font-weight: bold;
+            color: white;
+            width: 330px;
+            height: 70px;
+            /* background-color: tomato; */
+            line-height: 70px;
+            text-align: center;
+        }
+        
+        .wel{
+            margin-top: 20px;
+            font: 20px bold;
+        }
+        .login .inp1{
+            margin-top: 10px;
+            height: 50px;
+        }
+        .login span{
+            font-size: 21px;
+            display: inline-block;
+            width: 30px;
+            line-height: 55px;
+        }
+        input{
+            margin-top: -2px;
+            width: 200px;
+            height: 30px;
+            background-color: rgba(192, 221, 240, 0.486);
+            box-shadow: none;
+            border: 0px;
+            color: rgb(148, 144, 144);
+        }
+
+        .zc{
+            margin-top: -10px;
+            font-size: 12px;
+            
+        }
+        .zc button{
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            background-color: rgb(162, 196, 209);
+            /* border-radius: 15px; */
+            border: none;
+            color: rgb(101, 111, 114);
+            line-height: 30px;
+            border: 1px solid rgb(39, 235, 218);
+        }
+        .zc a{
+            color: rgb(162, 196, 209);
+
+        }
+
+
+        .login .otherLG{
+            font-size: 15px;
+            /* color: rgb(189, 138, 231); */
+        }
+        .otherLG span{
+            /* font-size: 15px; */
+            color: rgb(162, 196, 209);
+
+ .main {
+            margin: 0 auto;
+            padding: 15px;
+            width: 750px;
+            font-family: "microsoft yahei";
+            background-color: #f9f9fa;
+        }
+
+        .cf:before, .cf:after {
+            display: table;
+            content: "";
+            line-height: 0;
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        .cf {
+            *zoom: 1;
+        }
+
+        .upload-area {
+            position: relative;
+            float: left;
+            margin-right: 30px;
+            width: 200px;
+            height: 200px;
+            background-color: #F5F5F5;
+            border: 2px solid #E1E1E1;
+        }
+
+        .upload-area .file-tips {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            padding: 0 15px;
+            width: 170px;
+            line-height: 1.4;
+            font-size: 12px;
+            color: #A8A8A3;
+            text-align: center;
+        }
+
+        .userup-icon {
+            display: inline-block;
+            margin-right: 3px;
+            width: 16px;
+            height: 16px;
+            vertical-align: -2px;
+            background: url("/public/img/userup_icon.png") no-repeat;
+        }
+
+        .uploadify-button {
+            line-height: 120px !important;
+            text-align: center;
+        }
+
+        .preview-area {
+            float: left;
+        }
+
+        .tcrop {
+            clear: right;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .update-pic .crop {
+            background: url("/public/img/mystery.png") no-repeat scroll center center #EEEEEE;
+            float: left;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .crop100 {
+            height: 100px;
+            width: 100px;
+        }
+
+        .crop60 {
+            height: 60px;
+            margin-left: 20px;
+            width: 60px;
+        }
+
+        .update-pic .save-pic {
+            clear: left;
+            margin-right: 20px;
+        }
+
+        .update-pic .uppic-btn {
+            background-color: #348FD4;
+            color: #FFFFFF;
+            display: block;
+            float: left;
+            font-size: 16px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            width: 89px;
+        }
+
+        .preview {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 11;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            background: #fff;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!--背景图片-->
+        <div id="web_bg" style="background-image: url(img/12.jpg);"></div>
+        <!--其他代码 ... -->
+    </div>
+    <div class="login">
+        <p class="wel">LOG &nbsp;&nbsp;IN</p>
+        <p class="inp1">
+            <span class="iconfont icon-ren"></span>
+            <input type="text" value=" 用户名">
+        </p>
+        <p class="inp2">
+            <span class="iconfont icon-icon-mima"></span>
+            <input type="text" value=" 密码">
+        </p>
+        <p class="zc"><button class="btn">登录</button>
+            &nbsp;&nbsp;没有账号? &nbsp;&nbsp;<a href="">点击注册</a></span>
+        </p>
+      
+    </div>
+</body>
+</html>
